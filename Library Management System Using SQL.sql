@@ -484,7 +484,7 @@ l.member_id = m.member_id join books b on b.book_id = l.book_id where l.return_d
 -- Task 58: List all books that were borrowed on a specific date.
 SELECT b.book_id, b.title, b.author, l.loan_date FROM books b JOIN loans l ON b.book_id = l.book_id 
 WHERE l.loan_date = '2026-06-23';
--- Task 50: Find total books borrowed per genre by joining Books and Loans tables.
+-- Task 59: Find total books borrowed per genre by joining Books and Loans tables.
 select b.genre,count(l.loan_id) as total_book_borrowed from books b join loans l on b.book_id = l.book_id
 group by b.genre order by total_book_borrowed desc ;
 
