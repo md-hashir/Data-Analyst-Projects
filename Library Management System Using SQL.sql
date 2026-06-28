@@ -367,7 +367,6 @@ select * from members where email is null;
 -- Task 14: Find books that have less than 3 copies available in the library.
 select title from books where quantity < 3;
 -- Task 15: Select all loans made in the current month.
--- Bilkul live current month ke liye (chahe output khali aaye)
 SELECT * FROM loans 
 WHERE MONTH(loan_date) = MONTH(CURRENT_DATE()) 
   AND YEAR(loan_date) = YEAR(CURRENT_DATE()); 
